@@ -1,0 +1,16 @@
+title = "Hugo Template"
+googleAnalytics = ""
+disableFastRender = true
+languageCode = "sl-sl"
+defaultContentLanguage = "sl"
+
+[params]
+description = "To je opis te spletne strani"
+image = "/media/brand/og-image.jpg"
+
+[markup]
+
+[markup.goldmark]
+
+[markup.goldmark.renderer]
+unsafe = true
