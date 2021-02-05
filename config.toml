@@ -4,6 +4,9 @@ disableFastRender = true
 languageCode = "sl-sl"
 defaultContentLanguage = "sl"
 
+[build]
+  writeStats = true
+
 [params]
 description = "To je opis te spletne strani"
 image = "/media/brand/og-image.jpg"

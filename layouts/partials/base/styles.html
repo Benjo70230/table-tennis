@@ -1,14 +1,13 @@
-{{ $css_options := dict "targetPath" "styles/style.css" "outputStyle" "compressed" "enableSourceMap" true "includePaths" (slice "node_modules") }}
+{{ $sass := resources.Get "styles/style.scss" }}
+{{ $style := $sass | resources.ToCSS | resources.Minify }}
+<link rel="stylesheet" rel="preload" href="{{ $style.Permalink }}" as="style" onload="this.onload=null;this.rel='stylesheet'" crossorigin="anonymous">
 
-{{- if (in (slice (getenv "HUGO_ENV") hugo.Environment) "production") -}}
-  {{- $css_options = merge $css_options (dict "outputStyle" "compressed") -}}
-{{- end -}}
-
-{{ $sass_template := resources.Get "styles/style.scss" }}
-{{ $style := $sass_template | resources.ExecuteAsTemplate "main_parsed.scss" . | toCSS $css_options }}
-
+{{ $styles := resources.Get "styles/main.css" | postCSS (dict "config" "./postcss.config.js") }}
+{{ $styles }}
 {{- if (eq (getenv "HUGO_ENV") "production") -}}
-  {{- $style = $style | postCSS | minify | fingerprint "md5" -}}
-{{- end -}}
+{{ $styles := $styles | minify | fingerprint | resources.PostProcess }}
+<link rel="stylesheet" href="{{ $styles.RelPermalink }}" integrity="{{ $styles.Data.Integrity }}" onload="this.onload=null;this.rel='stylesheet'"/>
+{{ else }}
+<link rel="stylesheet" href="{{ $styles.RelPermalink }}"/>
+{{ end }}
 
-<link rel="stylesheet" href="{{ $style.Permalink }}">

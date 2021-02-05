@@ -5,7 +5,6 @@
 Template project for sites built with Hugo & Netlify
 
 * Client:
-* Netlify URL: https://hugo-template.netlify.app/
 * Production URL:
 
 ## Getting Started

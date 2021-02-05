@@ -5,7 +5,6 @@ backend:
   branch: master
   squash_merges: true
 
-display_url: https://hugo-template.netlify.app/
 logo_url: /media/brand/logo.svg
 media_folder: "static/media/uploads"
 public_folder: "/media/uploads"

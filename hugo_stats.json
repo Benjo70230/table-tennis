@@ -1,0 +1,49 @@
+{
+  "htmlElements": {
+    "tags": [
+      "!doctype",
+      "a",
+      "article",
+      "body",
+      "br",
+      "button",
+      "div",
+      "footer",
+      "h1",
+      "h3",
+      "h4",
+      "head",
+      "header",
+      "html",
+      "img",
+      "link",
+      "main",
+      "meta",
+      "p",
+      "script",
+      "span",
+      "strong",
+      "title"
+    ],
+    "classes": [
+      "body-overflow",
+      "button",
+      "col-12",
+      "col-sm-4",
+      "col-sm-6",
+      "col-sm-8",
+      "container",
+      "cookies",
+      "footer",
+      "grid",
+      "is-hidden",
+      "js-confirm-cookies",
+      "js-cookies",
+      "mb-16",
+      "text-right"
+    ],
+    "ids": [
+      "unsupported-browser"
+    ]
+  }
+}

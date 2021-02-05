@@ -16,6 +16,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="icon" href="{{ "favicon.png" | relURL }}" type="image/x-icon">
+  
 
   <!-- Primary Meta Tags -->
   <title>{{ .Title }} | {{ .Site.Title }}</title>
@@ -30,6 +31,7 @@
   <meta property="og:image" content="{{ .Site.BaseURL }}{{ $ogImage }}">
 
   {{ partial "base/styles" . }}
+  
 
   {{ template "_internal/google_analytics.html" . }}
 
