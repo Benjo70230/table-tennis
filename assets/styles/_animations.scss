@@ -1,0 +1,14 @@
+.headline-border {
+  position: relative;
+
+  &::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: -15px;
+    width: 85px;
+    height: 1px;
+    transform: translateX(-50%);
+    background-color: white;
+  }
+}
