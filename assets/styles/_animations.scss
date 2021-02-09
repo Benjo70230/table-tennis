@@ -12,3 +12,8 @@
     background-color: white;
   }
 }
+
+#menu-toggle:checked + #menu {
+  display: block;
+}
+

@@ -3,7 +3,6 @@
 <link rel="stylesheet" rel="preload" href="{{ $style.Permalink }}" as="style" onload="this.onload=null;this.rel='stylesheet'" crossorigin="anonymous">
 
 {{ $styles := resources.Get "styles/main.css" | postCSS (dict "config" "./postcss.config.js") }}
-{{ $styles }}
 {{- if (eq (getenv "HUGO_ENV") "production") -}}
 {{ $styles := $styles | minify | fingerprint | resources.PostProcess }}
 <link rel="stylesheet" href="{{ $styles.RelPermalink }}" integrity="{{ $styles.Data.Integrity }}" onload="this.onload=null;this.rel='stylesheet'"/>

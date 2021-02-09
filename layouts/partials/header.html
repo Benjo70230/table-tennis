@@ -1,7 +1,37 @@
-<header>
-  <div class="container">
-    <a href="/">
-      <img src="/media/brand/logo.svg" alt="{{ .Site.Title }}" width="80" height="9">
-    </a>
+<header class="fixed w-full md:px-2 lg:px-16 px-8 bg-white flex flex-wrap justify-between items-center py-2 md:py-4 shadow-md z-50">
+  <div class="w-1/2">
+    <img src="/media/uploads/stk-logo.png" alt="" width="80" height="9">
+  </div>
+  <label for="menu-toggle" class="cursor-pointer md:hidden block"><svg class="h-6 w-6 fill-current text-gray-900"
+      viewBox="0 0 24 24">
+      <title>menu</title>
+      <path fill-rule="evenodd"
+        d="M4 5h16a1 1 0 0 1 0 2H4a1 1 0 1 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2z">
+      </path>
+    </svg></label>
+  <input type="checkbox" class="hidden" id="menu-toggle" />
+  <div class="hidden w-1/2 lg:flex lg:items-center lg:w-auto w-full" id="menu">
+    <nav>
+      <ul class="lg:flex items-center justify-between text-base text-gray-700 pt-4 lg:pt-0">
+        <li>
+          <a href="#"
+            class="pl-5 font-bold text-red-800 font-sans text-lg md:text-xl tracking-widest mt-5 md:mt-0 headline-border uppercase">Početna</a>
+        </li>
+        <li>
+          <a href="#"
+            class="pl-5 font-bold text-red-800 font-sans text-lg md:text-xl tracking-widest mt-5 md:mt-0 headline-border uppercase">Početna</a>
+        </li>
+        <li>
+          <a href="#"
+            class="pl-5 font-bold text-red-800 font-sans text-lg md:text-xl tracking-widest mt-5 md:mt-0 headline-border uppercase">Početna</a>
+        </li>
+        <li>
+          <a href="#"
+            class="pl-5 font-bold text-red-800 font-sans text-lg md:text-xl tracking-widest mt-5 md:mt-0 headline-border uppercase">Početna</a>
+        </li>
+
+      </ul>
+    </nav>
+  </div>
   </div>
 </header>
