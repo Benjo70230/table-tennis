@@ -1,45 +1,43 @@
 {{ $data := index .Site.Data.footer }}
 
-<footer class="bg-gray-800">
-    <div class="flex-grow flex flex-wrap justify-center text-center">
-      <div class="lg:w-1/4 md:w-1/2 w-full px-4 py-6 md:py-10">
-        <h2 class="font-bold text-red-800 font-sans text-lg md:text-xl tracking-widest mt-5 md:mt-0 headline-border uppercase">O
-          nama</h2>
-        <p class="w-full text-base md:text-lg text-white mt-8 font-normal text-center">Stonoteniski klub "BUGOJNO" je osnovan 1998
-          godine.Klub u svojoj historiji bilježi odlične rezultate u svim kategorijama.Naš klub je uz Istanbul jedini
-          grad na balkanu u kojem su se igrala dva Balkasnska prvenstva.</p>
+<footer class="bg-red-900 pt-16">
+  <div class="container mx-auto flex-grow flex flex-wrap justify-center text-center">
+    <div class="p-5 pb-0 pt-0 w-full sm:w-full md:w-4/12 mb-12 md:mb-0 text-center md:text-center">
+      <h2 class="font-bold text-white font-sans text-lg md:text-xl tracking-widest mt-5 md:mt-0 headline-border uppercase">
+        {{ $data.aboutUs.title }}</h2>
+      <p class="w-full text-sm md:text-lg text-white mt-8 font-normal text-center">{{ $data.aboutUs.text }}</p>
+    </div>
+    <div class="p-5 pb-0 pt-0 w-full sm:w-full md:w-4/12 mb-12 md:mb-0 text-center md:text-center">
+      <h2 class="font-bold text-white font-sans text-lg md:text-xl tracking-widest mt-5 md:mt-0 headline-border uppercase">
+        {{ $data.ourLocation.title }}</h2>
+      <p class="w-full text-sm md:text-lg text-white mt-8 font-normal text-center">{{ $data.ourLocation.text }}</p>
+    </div>
+    <div class="p-5 pb-0 pt-0 w-full sm:w-full md:w-4/12 mb-12 md:mb-0 text-center md:text-center">
+      <h2 class="font-bold text-white font-sans text-lg md:text-xl tracking-widest mt-5 md:mt-0 headline-border uppercase">
+        {{ $data.ourContact.title }}</h2>
+      <div class="mt-8 mb-3">
+        <span class="w-full text-sm md:text-lg text-white font-normal text-center">{{ $data.telephone.text }}</span>
+        <a href="tel:{{ $data.telephone.number }}"
+          class="text-base md:text-lg text-white">{{ $data.telephone.number }}</a>
       </div>
-      <div class="lg:w-1/4 md:w-1/2 w-full px-4 py-6 md:py-10">
-        <h2 class="font-bold text-red-800 font-sans text-lg md:text-xl tracking-widest mt-5 md:mt-0 headline-border uppercase">
-          Naša lokacija</h2>
-        <p class="w-full text-base md:text-lg text-white mt-8 font-normal text-center">Kulina Bana,bb
-          Bugojno, Bosnia and Herzegovina</p>
-      </div>
-      <div class="lg:w-1/4 md:w-1/2 w-full px-4 py-6 md:py-10">
-        <h2 class="font-bold text-red-800 font-sans text-lg md:text-xl tracking-widest mt-5 md:mt-0 headline-border uppercase">
-          Kontakt</h2>
-        <div class="mt-8 mb-3">
-          <span class="w-full text-base md:text-lg text-white font-normal text-center">Telefon:</span>
-          <a href="tel:+38761341960" class="text-base md:text-lg text-white">+38761341960</a>
-        </div>
-        <div class="flex flex-row text-black justify-center">
-          <a href="https://www.facebook.com/pg/Stonoteniski-klub-BUGOJNO-Bugojno-277486986420101/about/?ref=page_internal">
-            <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-              class="w-6 h-6 text-white ml-2 hover:bg-blue-600 transition-all duration-500" viewBox="0 0 24 24">
-              <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
-            </svg>
-          </a>
-          <a href="https://twitter.com/?lang=en">
-            <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-              class="w-6 h-6 text-white ml-2 hover:bg-blue-400 transition-all duration-500" viewBox="0 0 24 24">
-              <path
-                d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z">
-              </path>
-            </svg>
-          </a>
-        </div>
+      <div class="flex flex-row text-black justify-center">
+        <a href="{{ $data.socialShare.facebook }}">
+          <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            class="w-6 h-6 text-white ml-2 hover:bg-blue-600 transition-all duration-500" viewBox="0 0 24 24">
+            <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
+          </svg>
+        </a>
+        <a href="{{ $data.socialShare.twitter }}">
+          <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            class="w-6 h-6 text-white ml-2 hover:bg-blue-400 transition-all duration-500" viewBox="0 0 24 24">
+            <path
+              d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z">
+            </path>
+          </svg>
+        </a>
       </div>
     </div>
+  </div>
   <div class="flex pb-8 px-3 m-auto text-center justify-center text-gray-400 text-sm flex-col md:flex-row max-w-6xl">
     <div class="mt-2">
       © Copyright MTHIT 2021. Sva prava zadržana.

@@ -1,5 +1,9 @@
 ---
-title: "Domov"
+title: Početna
+url: početna
+menus:
+  main:
+    weight: 10
 ---
 
-To je predložni repozitorij za jamstack projekte. Veliko zabave pri ustvarjanju z njim!
+

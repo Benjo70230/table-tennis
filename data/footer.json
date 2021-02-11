@@ -1,3 +1,21 @@
 {
-  "copyright": "Copyright 2021 PM, poslovni mediji d.o.o."
+  "aboutUs": {
+    "title": "O nama",
+    "text": "Stonoteniski klub Bugojno je osnovan 1998 godine.Klub u svojoj historiji bilježi odlične rezultate u svim kategorijama.Naš klub je uz Istanbul jedini grad na balkanu u kojem su se igrala dva Balkasnska prvenstva."
+  },
+  "ourLocation": {
+    "title": "Naša lokacija",
+    "text": "Kulina Bana,bb Bugojno, Bosnia and Herzegovina"
+  },
+  "ourContact": {
+    "title": "Kontakt"
+  },
+  "telephone": {
+    "text": "Telefon:",
+    "number": "+38761341960"
+  },
+  "socialShare": {
+    "facebook": "https://www.facebook.com/pg/Stonoteniski-klub-BUGOJNO-Bugojno-277486986420101/about/?ref=page_internal",
+    "twitter": "https://twitter.com/?lang=en"
+  }
 }

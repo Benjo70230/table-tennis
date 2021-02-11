@@ -1,46 +1,43 @@
-  <header class="fixed w-full lg:px-16 px-8 bg-white flex flex-wrap justify-between items-center py-4 shadow-md z-50">
-    <a href="/" class="text-xl font-mono logo"><img src="/media/uploads/stk-logo.png" width="70" height="70" alt=""></a>
-    <input class="hidden" type="checkbox" id="menu-toggle" />
-    <label for="menu-toggle" class="burger pointer-cursor md:hidden block">
-      <span></span>
-      <span></span>
-      <span></span>
-    </label>
+<header class="w-full lg:px-16 px-8 bg-white flex flex-wrap justify-between items-center py-4 shadow-md z-50">
+  <a href="/" class="text-xl font-mono logo"><img src="/media/uploads/stk-logo.png" width="70" height="70" alt=""></a>
+  <input class="hidden" type="checkbox" id="menu-toggle" />
+  <label for="menu-toggle" class="burger pointer-cursor md:hidden block">
+    <span></span>
+    <span></span>
+    <span></span>
+  </label>
 
-    <div class="hidden md:flex md:items-center md:w-auto w-full" id="menu">
-      <nav class="w-full">
-        <ul class="md:flex items-center justify-center text-base pt-4 md:pt-0">
-          <li><a
-              class="text-center md:p-4 py-3 px-0 block font-bold text-red-800 font-sans text-base md:text-lg tracking-widest border-b border-gray-800 md:border-0 uppercase"
-              href="#">Početna</a></li>
-          <li><a
-              class="text-center md:p-4 py-3 px-0 block font-bold text-red-800 font-sans text-base md:text-lg tracking-widest border-b border-gray-800 md:border-0 uppercase"
-              href="#">O nama</a></li>
-          <li><a
-              class="text-center md:p-4 py-3 px-0 block font-bold text-red-800 font-sans text-base md:text-lg tracking-widest border-b border-gray-800 md:border-0 uppercase"
-              href="#">Galerija</a></li>
-          <li><a
-              class="text-center md:p-4 py-3 px-0 block md:mb-0 mb-2 font-bold text-red-800 font-sans text-base md:text-lg tracking-widest border-b border-gray-800 md:border-0 uppercase"
-              href="#">Kontakt</a></li>
-        </ul>
-      </nav>
-    </div>
-    <div class="hidden md:flex">
-      <a href="https://www.facebook.com/pg/Stonoteniski-klub-BUGOJNO-Bugojno-277486986420101/about/?ref=page_internal">
-        <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-          class="w-6 h-6 rounded-full shadow-md text-black ml-2 hover:bg-blue-600 transition-all duration-500"
-          viewBox="0 0 24 24">
-          <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
-        </svg>
-      </a>
-      <a href="https://twitter.com/?lang=en">
-        <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-          class="w-6 h-6 rounded-full shadow-md text-black text ml-2 hover:bg-blue-400 transition-all duration-500"
-          viewBox="0 0 24 24">
-          <path
-            d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z">
-          </path>
-        </svg>
-      </a>
-    </div>
-  </header>
+  <div class="hidden md:flex md:items-center md:w-auto w-full" id="menu">
+    <nav class="w-full h-screen md:h-auto">
+      <ul class="md:flex items-center justify-center text-base pt-4 md:pt-0">
+        {{ $currentPage := . }}
+        {{ range .Site.Menus.main }}
+        {{ $active := or ($currentPage.IsMenuCurrent "nav" .) ($currentPage.HasMenuCurrent "nav" .) }}
+        {{ $active = or $active (eq .Page $currentPage) }}
+        {{ $active = or $active (eq .Page.Section $currentPage.Section) }}
+        <li class="{{ if $active }}active{{ end }}"><a
+            class="text-center md:p-4 py-3 px-0 block font-bold text-black hover:text-red-700 font-sans text-base md:text-lg tracking-widest border-b border-gray-800 md:border-0 uppercase"
+            href="#">{{ .Title }}</a></li>
+        {{ end }}
+      </ul>
+    </nav>
+  </div>
+  <div class="hidden md:flex">
+    <a href="https://www.facebook.com/pg/Stonoteniski-klub-BUGOJNO-Bugojno-277486986420101/about/?ref=page_internal">
+      <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+        class="w-6 h-6 rounded-full shadow-md text-black ml-2 hover:bg-blue-600 transition-all duration-500"
+        viewBox="0 0 24 24">
+        <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
+      </svg>
+    </a>
+    <a href="https://twitter.com/?lang=en">
+      <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+        class="w-6 h-6 rounded-full shadow-md text-black text ml-2 hover:bg-blue-400 transition-all duration-500"
+        viewBox="0 0 24 24">
+        <path
+          d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z">
+        </path>
+      </svg>
+    </a>
+  </div>
+</header>
