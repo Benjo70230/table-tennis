@@ -1,16 +1,18 @@
 <div class="container pt-16 mx-auto">
+  <h2
+    class="text-black font-bold font-sans leading-normal text-3xl md:text-5xl mx-auto flex justify-center mb-20 md:mb-24 border-red">
+    {{ .title }}</h2>
   <div class="flex flex-wrap text-center w-full">
-    <div class="sm:w-1/2 px-4">
-      <div class="h-auto overflow-hidden">
-        <img alt="content" class="object-cover object-center h-full w-full" src="/media/uploads/man-team.jpg">
+
+    {{ range .items }}
+    <a href="/" class="sm:w-1/2 px-4 block our-team">
+      <div class="h-96 overflow-hidden">
+        <img class="lazyload object-cover object-center h-full w-full" src="{{ .image.src }}"
+          data-src="{{ .image.src }}?nf_resize=fit&h=620" alt="{{ .image.alt }}">
       </div>
-      <h2 class="title-font text-2xl font-medium text-black hover:text-red-700 mt-6 mb-3 uppercase">Man</h2>
-    </div>
-    <div class="sm:w-1/2 px-4">
-      <div class="h-auto overflow-hidden">
-        <img alt="content" class="object-cover object-center h-full w-full" src="/media/uploads/woman-team.jpg">
-      </div>
-      <h2 class="title-font text-2xl font-medium text-black hover:text-red-700 mt-6 mb-3 uppercase">Woman</h2>
-    </div>
+      <h2 class="title-font text-xl md:text-2xl font-medium font-sans text-black hover:text-red-700 py-6 uppercase">
+        {{ .text }}</h2>
+    </a>
+    {{ end }}
   </div>
 </div>
