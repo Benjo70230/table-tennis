@@ -1,8 +1,11 @@
 {{ define "main" }}
   <main>
     <div class="">
+      {{ partial "hero" .Params.hero }}
       {{ partial "our-team" .Params.ourTeam }}
+      {{ partial "gallery" .Params.gallery }}
       {{ partial "about-us" .Params.aboutUs }}
+      {{ partial "contact-form" .Params.contactForm }}
       <div class="grid">
         <div class="col-12 col-sm-6">
           {{ .Content }}

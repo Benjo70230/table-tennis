@@ -70,3 +70,71 @@
   mask-image: linear-gradient(to bottom, #000, #fff);
   -webkit-mask-image: linear-gradient(to bottom, #000, #fff);
 }
+
+.hero-image {
+
+  height: 0;
+  padding-bottom: 56%;
+
+  .animated {
+    transform: translate3d(0, 42px, 0);
+    animation-duration: 1s;
+    animation-fill-mode: both;
+    -webkit-animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-name: fadeInUp;
+    -webkit-animation-name: fadeInUp;
+  }
+
+
+  &__title {
+    bottom: 5%;
+
+    @media only screen and (max-width: 1024px) {
+      left: 80px;
+    }
+
+    @media only screen and (max-width: 767px) {
+      left: 20px;
+      bottom: 15%;
+      padding-right: 40px;
+    }
+  }
+
+  &::after {
+    display: block;
+    position: absolute;
+    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0, #fff 100%);
+    background-size: cover;
+    background-position: center;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 75%;
+    width: 100%;
+    content: '';
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 40px, 0);
+  }
+
+  to {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fadeInUp {
+  from {
+    transform: translate3d(0 40px 0);
+  }
+
+  to {
+    transform: translate3d(0 0 0);
+    opacity: 1;
+  }
+}
