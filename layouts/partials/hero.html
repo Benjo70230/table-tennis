@@ -2,13 +2,11 @@
   <div class="min-h-screen hero-image bg-right-bottom flex">
     <img class="absolute w-full h-full object-cover" src="{{ .image.src }}" data-src="{{ .image.src }}?nf_resize=fit&h=620" alt="{{ .image.alt }}">
     <div class="hero-image__title absolute p-4 z-10">
-      <div class="">
-        <div class="py-4 px-5">
-          <div class="animated mb-3 text-2xl md:text-4xl">
-            <h3 class="text-red-800 text-4xl md:text-6xl leading-tight font-sans pb-4">{{ .title }}</h3>
-            <h2 class="uppercase font-sans text-red-800 font-bold leading-tight text-4xl md:text-5xl mb-20 md:mb-24">
-              {{ .title2 }}</h2>
-          </div>
+      <div class="py-4 px-5">
+        <div class="animated mb-3 text-2xl md:text-4xl">
+          <h3 class="text-red-800 text-4xl md:text-6xl leading-tight font-sans pb-4">{{ .headline }}</h3>
+          <h2 class="uppercase font-sans text-red-800 font-bold leading-tight text-4xl md:text-5xl mb-20 md:mb-24">
+            {{ .headline2 }}</h2>
         </div>
       </div>
     </div>

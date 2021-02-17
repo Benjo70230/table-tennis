@@ -30,8 +30,8 @@ contactForm:
   title: Kontakt
   
 hero:
-  title: Dobro došli na stranicu
-  title2: Stonoteniskog kluba "Bugojno"
+  headline: Dobro došli na stranicu
+  headline2: Stonoteniskog kluba "Bugojno"
   image:
       src: /media/uploads/man-team.jpg
       alt: alt
