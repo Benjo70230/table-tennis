@@ -1,11 +1,10 @@
 <div class="container pt-16 mx-auto">
-  <h2
-    class="text-black font-bold font-sans leading-normal text-3xl md:text-5xl mx-auto flex justify-center mb-20 md:mb-24 border-red">
+  <h2 class="text-black font-bold font-sans leading-normal text-3xl md:text-5xl mx-auto flex justify-center mb-20 md:mb-24 border-red">
     {{ .title }}</h2>
   <div class="flex flex-wrap text-center w-full">
 
     {{ range .items }}
-    <a href="/" class="sm:w-1/2 px-4 block our-team">
+    <a href="/" class="sm:w-1/2 px-6 block our-team">
       <div class="h-96 overflow-hidden">
         <img class="lazyload object-cover object-center h-full w-full" src="{{ .image.src }}"
           data-src="{{ .image.src }}?nf_resize=fit&h=620" alt="{{ .image.alt }}">
