@@ -1,6 +1,6 @@
 ---
-title: Kontakt
-url: kontakt
+title: Vijesti
+url: vijesti
 menus:
   main:
     weight: 40
