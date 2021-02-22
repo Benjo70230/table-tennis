@@ -62,6 +62,7 @@
   background-image: url(/media/uploads/o-nama2.jpg);
   background-size: cover;
   background-position: center;
+  background-attachment: fixed;
   overflow: hidden;
   margin: 0;
   width: 100%;
@@ -72,9 +73,13 @@
 }
 
 .hero-image {
+  background-image: url(/media/uploads/man-team.jpg);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  overflow: hidden;
+  height: calc(100vh);
 
-  height: 0;
-  padding-bottom: 56%;
 
   .animated {
     transform: translate3d(0, 42px, 0);

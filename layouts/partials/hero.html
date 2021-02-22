@@ -5,14 +5,12 @@
         <img class="w-10 h-10 lg:w-12 lg:h-12 mx-auto mt-4" src="/media/uploads/icon-document.png" alt=""></a>
     </div>
   </div>//-->
-  <div class="min-h-screen hero-image bg-right-bottom flex relative">
-    <img class="absolute w-full h-full object-cover" src="{{ .image.src }}"
-      data-src="{{ .image.src }}?nf_resize=fit&h=620" alt="{{ .image.alt }}">
+  <div class="hero-image hero-image flex relative">
     <div class="hero-image__title absolute p-4 lg:pr-52 z-10">
       <div class="py-4 px-5">
         <div class="animated mb-3 text-2xl md:text-4xl">
           <h3 class="text-red-700 text-4xl md:text-6xl leading-tight font-sans pb-4">{{ .headline }}</h3>
-          <h2 class="uppercase font-sans text-red-700 font-bold leading-tight text-4xl md:text-5xl  md:mb-24">
+          <h2 class="uppercase font-sans text-red-700 font-bold leading-tight text-4xl md:text-5xl">
             {{ .headline2 }}</h2>
         </div>
       </div>

@@ -1,60 +1,22 @@
   <div class="container mx-auto">
     <div class="flex flex-wrap m-4">
+
+      {{ range .items }}
       <div class="p-6 lg:w-1/4 md:w-1/2">
         <div class="h-full flex flex-col items-center text-center">
-          <a href="/" class="block our-team">
+          <a href="#" class="block our-team">
             <div class="h-56 overflow-hidden">
-              <img alt="team" class="flex-shrink-0 rounded-lg w-full h-56 object-cover object-center mb-4"
-                src="/media/uploads/woman-team.jpg">
+              <img class="flex-shrink-0 rounded-lg w-full h-56 object-cover object-center mb-4" src="{{ .image.src }}"
+                data-src="{{ .image.src }}?nf_resize=fit&h=620" alt="{{ .image.alt }}">
             </div>
           </a>
           <div class="w-full">
-            <h2 class="title-font font-medium text-lg md:text-xl text-gray-900 mt-3">Duvnjak Benjamin</h2>
-            <h3 class="text-gray-500 text-lg md:text-xl mb-3">Senior</h3>
+            <h2 class="title-font font-medium text-lg md:text-xl text-gray-900 mt-3">{{ .text }}</h2>
+            <h3 class="text-gray-500 text-lg md:text-xl mb-3">{{ .text2 }}</h3>
           </div>
         </div>
       </div>
-      <div class="p-6 lg:w-1/4 md:w-1/2">
-        <div class="h-full flex flex-col items-center text-center">
-          <a href="/" class="block our-team">
-            <div class="h-56 overflow-hidden">
-              <img alt="team" class="flex-shrink-0 rounded-lg w-full h-56 object-cover object-center mb-4"
-                src="/media/uploads/woman-team.jpg">
-            </div>
-          </a>
-          <div class="w-full">
-            <h2 class="title-font font-medium text-lg md:text-xl text-gray-900 mt-3">Duvnjak Benjamin</h2>
-            <h3 class="text-gray-500 text-lg md:text-xl mb-3">Senior</h3>
-          </div>
-        </div>
-      </div>
-      <div class="p-6 lg:w-1/4 md:w-1/2">
-        <div class="h-full flex flex-col items-center text-center">
-          <a href="/" class="block our-team">
-            <div class="h-56 overflow-hidden">
-              <img alt="team" class="flex-shrink-0 rounded-lg w-full h-56 object-cover object-center mb-4"
-                src="/media/uploads/woman-team.jpg">
-            </div>
-          </a>
-          <div class="w-full">
-            <h2 class="title-font font-medium text-lg text-gray-900 text-lg md:text-xl mt-3">Duvnjak Benjamin</h2>
-            <h3 class="text-gray-500 text-lg md:text-xl mb-3">Senior</h3>
-          </div>
-        </div>
-      </div>
-      <div class="p-6 lg:w-1/4 md:w-1/2">
-        <div class="h-full flex flex-col items-center text-center">
-          <a href="/" class="block our-team">
-            <div class="h-56 overflow-hidden">
-              <img alt="team" class="flex-shrink-0 rounded-lg w-full h-56 object-cover object-center mb-4"
-                src="/media/uploads/woman-team.jpg">
-            </div>
-          </a>
-          <div class="w-full">
-            <h2 class="title-font font-medium text-lg md:text-xl text-gray-900 mt-3">Duvnjak Benjamin</h2>
-            <h3 class="text-gray-500 text-lg md:text-xl mb-3">Senior</h3>
-          </div>
-        </div>
-      </div>
+      {{ end }}
+
     </div>
   </div>

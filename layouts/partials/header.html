@@ -1,4 +1,4 @@
-<header class="w-full lg:px-16 px-8 bg-white flex flex-wrap justify-between items-center py-4 shadow-md z-50">
+<header class="fixed w-full lg:px-16 px-8 bg-white flex flex-wrap justify-between items-center py-4 shadow-md z-50">
   <a href="/" class="text-xl font-mono logo"><img src="/media/uploads/stk-logo.jpg" width="70" height="70" alt=""></a>
   <input class="hidden" type="checkbox" id="menu-toggle" />
   <label for="menu-toggle" class="burger pointer-cursor md:hidden block">
@@ -17,7 +17,7 @@
         {{ $active = or $active (eq .Page.Section $currentPage.Section) }}
         <li class="{{ if $active }}active{{ end }}"><a
             class="text-center md:p-4 py-3 px-0 block font-bold text-black hover:text-red-700 font-sans text-base md:text-lg tracking-widest border-b border-gray-800 md:border-0 uppercase"
-            href="#">{{ .Title }}</a></li>
+            href="{{ .URL }}">{{ .Title }}</a></li>
         {{ end }}
       </ul>
     </nav>

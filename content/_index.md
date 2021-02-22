@@ -32,7 +32,4 @@ contactForm:
 hero:
   headline: Dobro došli na stranicu
   headline2: Stonoteniskog kluba "Bugojno"
-  image:
-      src: /media/uploads/man-team.jpg
-      alt: alt
 ---

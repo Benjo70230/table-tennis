@@ -1,17 +1,8 @@
-<div class="container pt-16 mx-auto">
-  <h2 class="text-black font-bold font-sans leading-normal text-3xl md:text-5xl mx-auto flex justify-center mb-20 md:mb-24 border-red">
-    {{ .title }}</h2>
-  <div class="flex flex-wrap text-center w-full">
-
-    {{ range .items }}
-    <a href="/" class="sm:w-1/2 px-6 block our-team">
-      <div class="h-96 overflow-hidden">
-        <img class="lazyload object-cover object-center h-full w-full" src="{{ .image.src }}"
-          data-src="{{ .image.src }}?nf_resize=fit&h=620" alt="{{ .image.alt }}">
-      </div>
-      <h2 class="title-font text-xl md:text-2xl font-medium font-sans text-black hover:text-red-700 py-6 uppercase">
-        {{ .text }}</h2>
-    </a>
-    {{ end }}
+<a href="{{ .Permalink }}" class="sm:w-1/2 px-6 block our-team">
+  <div class="h-96 overflow-hidden">
+    <img class="lazyload object-cover object-center h-full w-full" src="{{ .Params.image.src }}"
+      data-src="{{ .Params.image.src }}?nf_resize=fit&h=620" alt="{{ .Params.image.alt }}">
   </div>
-</div>
+  <h2 class="title-font text-xl md:text-2xl font-medium font-sans text-black text-center hover:text-red-700 py-6 uppercase">
+    {{ .Params.title }}</h2>
+</a>

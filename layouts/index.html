@@ -2,18 +2,22 @@
   <main>
     <div class="">
       {{ partial "hero" .Params.hero }}
-      {{ partial "our-team" .Params.ourTeam }}
-      {{ partial "our-players" .Params.ourPlayers }}
+      {{ with (.Site.GetPage (printf "/%s" "nas-tim")) }}
+      <div class="container mx-auto">
+      <h2 class="text-black font-bold font-sans leading-normal text-3xl md:text-5xl mx-auto flex justify-center mb-20 md:mb-24 border-red">
+        {{ .Params.title }}</h2>
+        <div class="flex flex-wrap">
+        {{ range last 2 .Pages }}
+          {{ partial "our-team" . }}
+          {{ end }}
+        </div>
+        {{ end }}
+      </div>
       {{ partial "news" .Params.news }}
       {{ partial "gallery" .Params.gallery }}
       {{ partial "about-us" .Params.aboutUs }}
       {{ partial "contact-form" .Params.contactForm }}
-      <div class="grid">
-        <div class="col-12 col-sm-6">
-          {{ .Content }}
-        </div>
-      </div>
-
+    
       <br><br>
 
       <div class="grid">
