@@ -4,9 +4,9 @@
     <h2 class="text-black font-bold font-sans leading-normal text-3xl md:text-5xl mx-auto flex justify-center mb-20 md:mb-24 border-red uppercase">
       {{ .Params.title }}</h2>
 
-    {{ partial "our-players" .Params.ourPlayers }}
+    {{ partial "gallery" .Params.gallery }}
 
-    {{ .Content | safeHTML }}
+
   </div>
 </main>
 {{ end }}

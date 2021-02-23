@@ -1,28 +1,21 @@
 <section class="text-gray-600 body-font">
   <div class="container px-5 py-24 mx-auto flex flex-wrap">
-    <div class="flex flex-wrap md:-m-2 -m-1">
-      <div class="flex flex-wrap w-1/2">
-        <div class="md:p-2 p-1 w-1/2">
-          <img alt="gallery" class="w-full object-cover h-full object-center block" src="/media/uploads/man-team.jpg">
-        </div>
-        <div class="md:p-2 p-1 w-1/2">
-          <img alt="gallery" class="w-full object-cover h-full object-center block" src="/media/uploads/man-team.jpg">
-        </div>
-        <div class="md:p-2 p-1 w-full">
-          <img alt="gallery" class="w-full h-full object-cover object-center block" src="/media/uploads/man-team.jpg">
-        </div>
-      </div>
-      <div class="flex flex-wrap w-1/2">
-        <div class="md:p-2 p-1 w-full">
-          <img alt="gallery" class="w-full h-full object-cover object-center block" src="/media/uploads/man-team.jpg">
-        </div>
-        <div class="md:p-2 p-1 w-1/2">
-          <img alt="gallery" class="w-full object-cover h-full object-center block" src="/media/uploads/man-team.jpg">
-        </div>
-        <div class="md:p-2 p-1 w-1/2">
-          <img alt="gallery" class="w-full object-cover h-full object-center block" src="/media/uploads/man-team.jpg">
-        </div>
-      </div>
+    <div class="flex flex-wrap md:m-2 m-1">
+      {{ range $i, $p := .items }}
+      {{ if lt $i 2 }}
+      <a href="" class="w-full md:w-6/12 text-white bg-hover">
+        <img class="w-full object-cover object-center lazyload p-4" src="{{ .src }}"
+          data-src="{{ .src }}?nf_resize=fit&h=620" alt="{{ .alt }}">
+      </a>
+      {{ end }}
+
+      {{ if or (gt $i 2) (eq $i 2) }}
+      <a href="" class="w-full md:w-4/12 text-white bg-hover">
+        <img class="w-full object-cover object-center lazyload p-4" src="{{ .src }}"
+          data-src="{{ .src }}?nf_resize=fit&h=620" alt="{{ .alt }}">
+      </a>
+      {{ end }}
+      {{ end }}
     </div>
   </div>
 </section>
