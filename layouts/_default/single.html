@@ -1,10 +1,32 @@
 {{ define "main" }}
 <main>
-  <div class="container">
-    <h1></h1>
-sydfndsyfydg ydgy dgy dgydg ydg dy
+  <div class="single-layout container mx auto pt-32">
+    <div class="lg:px-48 md:px-16 px-10">
+      <h1 class="text-3xl lg:text-6xl md:text-4xl font-medium my-8 md:my-20 mb-8 md:mb-12">
+        {{ .Title }}</h1>
+        <div class="flex flex-wrap justify-center lg:justify-end">
+          <span class="italic mb-4 block font-sans">Podijeli na facebooku:</span>
+          <a href="https://www.facebook.com/pg/Stonoteniski-klub-BUGOJNO-Bugojno-277486986420101/about/?ref=page_internal">
+            <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              class="w-6 h-6 rounded-full shadow-md text-black ml-2 hover:bg-blue-600 transition-all duration-500"
+              viewBox="0 0 24 24">
+              <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
+            </svg>
+          </a>
+        </div>
+    </div>
 
-    {{ .Content | safeHTML }}
+    {{ if .Params.image.src }}
+    <div class="flex flex-wrap img-wrap">
+    <img class="mt-6 img-hero w-full object-contain md:px-0" src="{{ .Params.image.src }}"
+      alt="{{ .Params.image.alt }}">
+    </div>
+    {{ end }}
+
+
+    <div class="content lg:px-44 md:px-14 px-4 py-16 md:py-28 font-sans text-black text-base md:text-2xl leading-relaxed">
+      {{ .Content | safeHTML }}
+    </div>
   </div>
 </main>
 {{ end }}
