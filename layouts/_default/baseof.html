@@ -42,14 +42,13 @@
 
   {{ partialCached "base/unsupported-browser" . }}
 
-  <div class="body-overflow">
+  <div class="body-overflow"></div>
     {{ partial "header" . }}
   
     {{ block "main" . }}{{ end }}
   
     {{ partial "footer" . }}
     {{ partial "cookies" . }}
-  </div>
 
   {{ partial "base/scripts" . }}
 
