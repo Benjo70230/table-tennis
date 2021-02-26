@@ -10,7 +10,7 @@ ourTeam:
   items:
     - text: Muški tim
       image:
-        src: /media/uploads/man-team.jpg
+        src: /media/uploads/man-team2.jpg
         alt: alt
     - text: Ženski tim
       image:

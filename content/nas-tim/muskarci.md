@@ -1,7 +1,7 @@
 ---
 title: muški tim
 image:
-  src: /media/uploads/man-team.jpg
+  src: /media/uploads/man-team2.jpg
   alt: alt
 ourPlayers:
   items:

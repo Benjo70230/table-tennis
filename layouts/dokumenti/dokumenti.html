@@ -1,0 +1,39 @@
+{{ define "main" }}
+<main>
+  <div class="single-layout container mx-auto pt-32">
+    <h2
+      class="text-black font-bold font-sans leading-normal text-3xl md:text-5xl mx-auto flex justify-center mb-20 md:mb-24 border-red uppercase">
+      {{ .Params.title }}</h2>
+
+    <div class="px-8 md:px-10 my-12 md:my-16">
+      <h3 class="font-bold font-sans text-black uppercase text-xl md:text-3xl mb-6">{{ .Params.headline }}</h3>
+
+      {{ range .Params.items }}
+      <a href="{{ .href }}"
+        class="flex justify-between border-t border-b py-4 md:py-8 block mb-4 md:mb-8 font-sans text-lg md:text-xl tracking-wide font-medium hover:text-red-700 transition-colors duration-200"
+        download>{{ .text }}
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z">
+          </path>
+        </svg>
+      </a>
+      {{end}}
+    </div>
+    <div class="px-8 md:px-10 mb-12 md:mb-16">
+      <h3 class="font-bold font-sans text-black uppercase text-xl md:text-3xl mb-6">{{ .Params.headline2 }}</h3>
+
+      {{ range .Params.items2 }}
+      <a href="{{ .href }}"
+        class="flex justify-between border-t border-b- py-4 md:py-8 block mb-8 font-sans text-lg md:text-xl tracking-wide font-medium hover:text-red-700 transition-colors duration-200"
+        download>{{ .text }}
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z">
+          </path>
+        </svg>
+      </a>
+      {{end}}
+    </div>
+</main>
+{{ end }}
