@@ -40,8 +40,6 @@
       "active",
       "animated",
       "auto",
-      "back-to-top",
-      "bg-blue-400",
       "bg-hover",
       "bg-red-200",
       "bg-red-800",
@@ -92,7 +90,6 @@
       "hero-image",
       "hero-image__title",
       "hidden",
-      "hide",
       "hover:bg-blue-600",
       "hover:text-red-700",
       "img-hero",
@@ -221,7 +218,6 @@
       "rounded-lg",
       "shadow-md",
       "shadow-xl",
-      "show",
       "single-layout",
       "sm:w-1/2",
       "sm:w-full",
@@ -254,10 +250,8 @@
       "z-50"
     ],
     "ids": [
-      "button",
       "menu",
       "menu-toggle",
-      "scrollTopBtn",
       "unsupported-browser"
     ]
   }
