@@ -1,11 +1,10 @@
-{{ $ogDesc := .Site.Params.description }}
+{{ $ogDesc := .Params.description }}
 {{ with .Description }}
-  {{ $ogDesc = . }}
+{{ $ogDesc = . }}
 {{ end }}
-
-{{ $ogImage := .Site.Params.image }}
-{{ with .Params.image }}
-  {{ $ogImage = . }}
+{{ $ogImage := .Params.image.src }}
+{{ with $ogImage }}
+{{ $ogImage = . }}
 {{ end }}
 
 <!DOCTYPE html>

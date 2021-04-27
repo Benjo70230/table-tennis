@@ -1,12 +1,14 @@
 {{ define "main" }}
+{{ $link := .Permalink }}
+
 <main>
-  <div class="single-layout container mx auto pt-32">
+  <div class="single-layout container mx-auto pt-32">
     <div class="lg:px-48 md:px-16 px-10">
       <h1 class="text-3xl lg:text-6xl md:text-4xl font-medium my-8 md:my-20 mb-8 md:mb-12">
         {{ .Title }}</h1>
         <div class="flex flex-wrap justify-center lg:justify-end">
           <span class="italic mb-4 block font-sans">Podijeli na facebooku:</span>
-          <a href="https://www.facebook.com/pg/Stonoteniski-klub-BUGOJNO-Bugojno-277486986420101/about/?ref=page_internal">
+          <a href="https://www.facebook.com/sharer/sharer.php?u={{ $link }}">
             <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
               class="w-6 h-6 rounded-full shadow-md text-black ml-2 hover:bg-blue-600 transition-all duration-500"
               viewBox="0 0 24 24">

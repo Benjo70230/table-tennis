@@ -2,7 +2,7 @@
 <main>
   {{ partial "hero" .Params.hero }}
   {{ with (.Site.GetPage (printf "/%s" "nas-tim")) }}
-  <div class="container mx-auto py-24">
+  <div class="container mx-auto py-16">
     <h2
       class="text-black font-bold font-sans leading-normal text-3xl md:text-5xl mx-auto flex justify-center mb-20 md:mb-24 border-red">
       {{ .Params.title }}</h2>
@@ -13,7 +13,7 @@
     </div>
     {{ end }}
   </div>
-  <div class="container mx-auto py-24">
+  <div class="container mx-auto py-16">
     {{ with (.Site.GetPage (printf "/%s" "vijesti")) }}
     <h2
       class="text-black font-bold font-sans leading-normal text-3xl md:text-5xl mx-auto flex justify-center mb-20 md:mb-24 border-red">
