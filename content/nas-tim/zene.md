@@ -1,7 +1,7 @@
 ---
 title: ženski tim
 image:
-  src: /media/uploads/woman-team.jpg
+  src: /media/uploads/zenski-tim.jpg
   alt: alt
 ourPlayers:
   items:

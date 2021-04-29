@@ -1,9 +1,24 @@
 <div class="about-us pt-16">
-  <h2 class="text-black font-bold font-sans leading-normal text-3xl md:text-5xl mx-auto flex justify-center mb-20 md:mb-24 border-red">
-    {{ .title }}</h2>
-  <div class="flex-wrap flex blur">
-    <div class="lg:p-16 p-8 md:w-1/2 lg:w-1/2">
-      <p class="text-white text-lg md:text-2xl leading-relaxed"> {{ .text }}</p>
+    <div class="container mx-auto flex items-center flex-wrap mb-20">
+      <div class="w-full lg:w-1/2 lg:p-8">
+        <p class="p-4 md:p-0 md:pb-8 text-black font-bold font-sans leading-normal text-3xl md:text-5xl">O nama</p>
+        <p class="p-4 md:p-0 text-gray-600 text-base md:text-lg leading-relaxed font-normal">{{ .subtitle }}</p>
+      </div>
+      <div class="w-full lg:w-1/2">
+        <img src="/media/uploads/stk-bugojno.jpg" class="pt-10 lg:pt-0 object-cover rounded-lg">
+      </div>
     </div>
+    <div class="container mx-auto flex items-center flex-wrap mb-20">
+      <div class="w-full lg:w-1/2">
+        <img src="/media/uploads/stiga-ball.jpg" class="pb-10 lg:pb-0 object-cover rounded-lg">
+      </div>
+      <div class="w-full lg:w-1/2 lg:p-8">
+        <p class="p-4 md:p-0 md:pb-8 text-black font-bold font-sans leading-normal text-3xl md:text-5xl">Zašto igrati stoni tenis?</p>
+        <p class="p-4 md:p-0 text-gray-600 text-base md:text-lg leading-relaxed font-normal">{{ .desc }}</p>
+      </div>
+    </div>
+    <div class="blur py-32 lg:py-40 mx-auto text-center px-6 opacity-100">
+    <p class="text-white text-4xl md:text-5xl leading-relaxed font-normal pb-12 lg:pb-16 font-serif">Stoni tenis?</p>
+      <span class="text-white text-6xl md:text-8xl font-semibold font-serif leading-relaxed">„Bilo ko, bilo kad, <br>bilo gdje“!<br></span>
   </div>
 </div>
