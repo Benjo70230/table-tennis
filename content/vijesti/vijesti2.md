@@ -4,6 +4,7 @@ description: Jučer u Tuzli su odigrane kvalifikacije za prvi Top 8 za kadete i 
 image:
   src: /media/uploads/stk-bugojno.jpg
   alt: alt
+date: 2021-01-29T12:20:20+01:00
 ---
 
 DJučer u Tuzli su odigrane kvalifikacije za prvi Top 8 za kadete i kadetkinje.

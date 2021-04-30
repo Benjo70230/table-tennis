@@ -4,9 +4,9 @@
   {{ partial "hero" .Params.hero }}
   {{ with (.Site.GetPage (printf "/%s" "nas-tim")) }}
   <div class="container mx-auto py-16">
-    <h2
-      class="text-black font-bold font-sans leading-normal text-3xl md:text-5xl mx-auto flex justify-center mb-20 md:mb-24 border-red">
-      {{ .Params.title }}</h2>
+    <h2 class="text-black font-bold font-sans leading-normal text-3xl md:text-5xl mx-auto flex justify-center mb-20 md:mb-24 border-red">
+      {{ .Params.title }}
+    </h2>
     <div class="flex flex-wrap">
       {{ range last 2 .Pages }}
       {{ partial "our-team" . }}
@@ -14,20 +14,23 @@
     </div>
     {{ end }}
   </div>
-  <div class="container mx-auto py-16">
-    {{ with (.Site.GetPage (printf "/%s" "vijesti")) }}
-    <h2
-      class="text-black font-bold font-sans leading-normal text-3xl md:text-5xl mx-auto flex justify-center mb-20 md:mb-24 border-red">
-      {{ .Params.title }}</h2>
-    {{ range $i, $p := first 3 .RegularPages }}
-    {{ partial "news-item" (dict "context" . )}}
-    
+  <h2 class="text-black font-bold font-sans leading-normal text-3xl md:text-5xl mx-auto flex justify-center mb-20 md:mb-24 border-red">
+    Vijesti
+  </h2>
+  <section class="background">
+    <div class="flex flex-wrap container mx-auto py-16">
+      {{ with (.Site.GetPage (printf "/%s" "vijesti")) }}
+      {{ range $i, $p := first 3 .RegularPages }}
+      <div class="w-full sm:w-6/12 md:w-6/12 lg:w-4/12">
+        {{ partial "news-item" (dict "context" . )}}
+      </div>
+
+      {{ end }}
+    </div>
     {{ end }}
-  </div>
+  </section>
 
-  {{ end }}
 
- 
   {{ partial "gallery" .Params.gallery }}
   {{ partial "about-us" .Params.aboutUs }}
   {{ partial "event" .Params.event }}

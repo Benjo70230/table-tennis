@@ -16,7 +16,7 @@
         {{ $active = or $active (eq .Page $currentPage) }}
         {{ $active = or $active (eq .Page.Section $currentPage.Section) }}
         <li class="{{ if $active }}active{{ end }}"><a
-            class="text-center md:p-4 py-3 px-0 block font-bold text-black hover:text-red-700 font-sans text-base md:text-lg tracking-widest border-b border-gray-800 md:border-0 uppercase"
+            class="text-center md:p-4 py-3 px-0 block font-bold text-black hover:text-red-700 active:text-red-700 font-sans text-base md:text-lg tracking-widest border-b border-gray-800 md:border-0 uppercase"
             href="{{ .URL }}">{{ .Title }}</a></li>
         {{ end }}
       </ul>
