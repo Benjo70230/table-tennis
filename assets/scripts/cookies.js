@@ -1,19 +1,25 @@
-function cookies () {
-  const cookiesEl = document.querySelector('.js-cookies')
-  const consentBtn = document.querySelector('.js-confirm-cookies')
+function cookies() {
+  const cookiesEl = document.querySelector('.cookies');
+  const consentBtn = cookiesEl.querySelector('.cookies__confirm');
 
-  const cookieExists = document.cookie.match(/^(.*;)?\s*cookies\s*=\s*[^;]+(.*)?$/)
+  const init = () => {
+    const cookieExists = document.cookie.match(/^(.*;)?\s*cookies\s*=\s*[^;]+(.*)?$/);
 
-  if (!cookieExists && cookiesEl && consentBtn) {
-    cookiesEl.classList.remove('is-hidden')
+    if (!cookieExists) {
+      cookiesEl.classList.remove('hidden');
 
-    consentBtn.addEventListener('click', () => {
-      const date = new Date()
-      date.setTime(date.getTime() + (365 * 24 * 60 * 60 * 1000))
-      document.cookie = `cookies=true; expires=${date}; path=/`
-      cookiesEl.classList.add('is-hidden')
-    })
+      consentBtn.addEventListener('click', () => {
+        const date = new Date();
+        date.setTime(date.getTime() + (365 * 24 * 60 * 60 * 1000));
+        document.cookie = `cookies=true; expires=${date}; path=/`;
+        cookiesEl.classList.add('hidden');
+      });
+    }
+  };
+
+  if (cookiesEl) {
+    init();
   }
 }
 
-cookies()
+cookies();

@@ -1,14 +1,14 @@
 {{ $data := index .Site.Data.cookies }}
 
-<div class="cookies js-cookies is-hidden">
-  <div class="container">
-    <div class="grid">
-      <div class="col-12 col-sm-8">
-        <span>{{ $data.text }} <a href="{{ $data.more.href }}">{{ $data.more.text }}</a></span>
+<div class="cookies hidden bg-blue-900 py-4 md:py-8 bottom-0 fixed z-50 w-full">
+  <div class="container mx-auto">
+    <div class="flex flex-wrap items-center">
+      <div class="md:w-8/12 p-4">
+        <span class="text-white lg:rounded-full font-sans md:text-lg">{{ $data.text }}</span>
       </div>
 
-      <div class="col-12 col-sm-4 text-right">
-        <button class="button js-confirm-cookies">{{ $data.confirm }}</button>
+      <div class="h-full w-4/12 p-4 flex md:justify-end">
+        <button class="button cookies__confirm py-2 px-4 md:px-8 bg-red-800 hover:bg-white hover:text-red-900 hover:border-white outline-none transition-color duration-200 border-2 border-red-800 tracking-wider text-white text-base rounded-md font-medium uppercase">{{ $data.button.text }}</a></button>
       </div>
     </div>
   </div>

@@ -1,8 +1,6 @@
 {
-  "text": "Ta spletna stran za svoje delovanje uporablja piškotke.",
-  "confirm": "Razumem",
-  "more": {
-    "text": "Več",
-    "href": "/piskotki"
+  "text": "Obavještavamo vas da se ova web stranica koristi vlastitim,tehničkim i kolačićima trećih strana kako bi bila sigurna da je naša web stranica prilagođena korisnicima i zajamčila visoku funkcionalnost web stranice. Nastavkom pregledavanja ove web stranice izjavljujete da prihvaćate upotrebu kolačića.",
+  "button": {
+    "text": "Prihvati"
   }
 }
