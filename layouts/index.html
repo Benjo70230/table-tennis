@@ -9,7 +9,7 @@
     </h2>
     <div class="flex flex-wrap">
       {{ range last 2 .Pages }}
-      {{ partial "our-team" . }}
+        {{ partial "our-team" . }}
       {{ end }}
     </div>
     {{ end }}
@@ -18,15 +18,15 @@
     Vijesti
   </h2>
   <section class="background">
-    <div class="flex flex-wrap container mx-auto py-16">
-      {{ with (.Site.GetPage (printf "/%s" "vijesti")) }}
-      {{ range $i, $p := first 3 .RegularPages }}
-      <div class="w-full sm:w-6/12 md:w-6/12 lg:w-4/12">
-        {{ partial "news-item" (dict "context" . )}}
-      </div>
+      <div class="flex flex-wrap container mx-auto py-16">
+        {{ with (.Site.GetPage (printf "/%s" "vijesti")) }}
+        {{ range $i, $p := first 3 .RegularPages }}
+          <div class="w-full sm:w-6/12 md:w-6/12 lg:w-4/12">
+            {{ partial "news-item" (dict "context" . )}}
+          </div>
 
-      {{ end }}
-    </div>
+        {{ end }}
+      </div>
     {{ end }}
   </section>
 
@@ -34,6 +34,8 @@
   {{ partial "gallery" .Params.gallery }}
   {{ partial "about-us" .Params.aboutUs }}
   {{ partial "event" .Params.event }}
+  {{ partial "contact-form"  }}
+
 
 
   <div class="grid">
