@@ -1,17 +1,17 @@
     <div class="flex flex-wrap md:m-2 m-1">
       {{ range $i, $p := .items }}
       {{ if lt $i 2 }}
-      <a href="" class="w-full md:w-6/12 text-white bg-hover">
-        <img class="w-full object-cover object-center lazyload p-4" src="{{ .src }}"
-          data-src="{{ .src }}?nf_resize=fit&h=620" alt="{{ .alt }}">
-      </a>
+        <a href="" class="w-full md:w-6/12 text-white bg-hover">
+          <img class="w-full object-cover object-center lazyload p-4" src="{{ .src }}"
+            data-src="{{ .src }}?nf_resize=fit&h=620" alt="{{ .alt }}">
+        </a>
       {{ end }}
 
       {{ if or (gt $i 2) (eq $i 2) }}
-      <a href="" class="w-full md:w-4/12 text-white bg-hover">
-        <img class="w-full object-cover object-center lazyload p-4" src="{{ .src }}"
-          data-src="{{ .src }}?nf_resize=fit&h=620" alt="{{ .alt }}">
-      </a>
+        <a href="" class="w-full md:w-4/12 text-white bg-hover">
+          <img class="w-full object-cover object-center lazyload p-4" src="{{ .src }}"
+            data-src="{{ .src }}?nf_resize=fit&h=620" alt="{{ .alt }}">
+        </a>
       {{ end }}
       {{ end }}
     </div>
